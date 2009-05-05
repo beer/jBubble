@@ -1,0 +1,109 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
+<title>Coda Bubble Example</title> 
+<script type="text/javascript" src="jquery-1.3.2.js"> </script> 
+<script type="text/javascript" src="jbubble.js"> </script> 
+
+<style type="text/css" media="screen"> 
+<!--
+* {
+	margin: 0px;
+	padding: 0px;
+}
+        
+.beer {
+	position: relative;
+    	left: 200px;
+    	top: 300px;
+    	width: 300px;
+}
+
+.beer .pivmi , .beer .vanessa{
+    position: relative;
+    height: 50px;
+	border: 1px solid #007AFA;
+}
+
+.popup {
+       	width: 100%;
+       	position: absolute;
+	z-index: 50; 
+        _height:1%; 
+}
+
+.popup .container{
+	border: 1px solid #CDE5FF;
+	background-color: #EBF5FF;
+}
+
+.bottom-arrow {
+	margin-top:-1px;
+	z-index:10000;
+	position:relative;
+	clear:both;
+	text-align: left !important;
+	margin-left: 200px;
+	}
+
+.trigger {
+    	background-color: #CDE5FF;
+}
+
+.float-title {
+	height:20px; 
+	text-align:left;
+	position: relative;
+	background:#CDE5FF;
+}
+.float-title .close {
+	position:absolute;
+	right: 1px;
+	top:1px;
+	cursor:pointer;
+}
+
+--> 
+</style> 
+<script type="text/javascript"> 
+<!--
+$(function () {
+    $('.vanessa').pixbubble({top:-35, left:-9});
+    $('.pivmi').pixbubble({top:-50, left:-9, action:'click'});
+});
+--> 
+</script> 
+</head> 
+<body> 
+<div class='beer'>
+    <div class='vanessa'>
+    	<div class='trigger'>Trigger MouseOver</div>
+        <div class='popup'>
+	    <div class="float-title">
+		Input your name :
+	    </div>
+	    <div class="container">
+	    	<input type='input'/>
+		<input type='button' value='Submit'/>
+	    </div>
+	    <div class="bottom-arrow"><img src="images/bottom-arrow.gif"></div>
+	</div>
+    </div>
+    <div class='pivmi'>
+    	<div class='trigger'>Trigger Click</div>
+        <div class='popup'>
+	    	<div class="float-title">
+		Input your name :
+		<div class="close"><img src="images/close.gif"></div>
+	    <div class="container">
+	    	<input type='checkbox'/>Yes
+	    	<br>
+		<input type='checkbox'/>No
+	    	<br>
+	    </div>
+	    <div class="bottom-arrow"><img src="images/bottom-arrow.gif"></div>
+	</div>
+    </div>
+</div>
+</body> 
+</html>                                       
